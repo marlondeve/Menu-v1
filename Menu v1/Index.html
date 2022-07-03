@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Css Menu</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+  <meta charset="utf-8">
+  <title>Css Botones v1</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  }
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: 0.5s;
+    background-color: #f53b57;
+  }
+  .navegacion{
+    position: relative;
+    width: 350px;
+    height: 70px;
+    background: #fff;
+    border-radius: 35px;
+    box-shadow: 0 15px 25px rgba( 0, 0, 0, 0.1);
+
+  }
+  .navegacion ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+  }
+  .navegacion ul li{
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+  }
+  .navegacion ul li a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    color: #333;
+    font-weight: 500;
+  }
+  .navegacion ul li a .icono{
+    position: relative;
+    display: block;
+    justify-content: center;
+    line-height: 75px;
+    width: 100%;
+    text-align: center;
+    transition: 0.5s;
+  }
+
+  .navegacion ul li.activo a .icono{
+  color: #fff;
+  }
+  .navegacion ul li a .icono .fa{
+    font-size: 24px;
+  }
+  .navegacion ul li a .titulo{
+    position: absolute;
+    top: -55px;
+    left: 50%;
+    transform: translate(-50%, 15%);
+    background: #fff;
+    width: auto;
+    padding: 5px 10px;
+    border-radius: 6px;
+    box-shadow: 0 5px 15px rgba( 0, 0, 0, 0.1);
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .navegacion ul li:hover a .titulo{
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 50%);
+  }
+  .navegacion ul li a .titulo::before{
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    bottom: -8px;
+    left: 48%;
+    transform: rotate(45deg) translateX(-50%);
+    border-radius: 2px;
+  }
+  .navegacion ul .indicador{
+    position: absolute;
+    left: 0;
+    width: 70px;
+    height: 70px;
+
+    transition: 0.5s;
+  }
+  .navegacion ul .indicador::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #333;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: 0.5s;
+
+  }
+  .navegacion ul li:nth-child(1).activo ~ .indicador{
+    transform: translateX(calc(70px * 0));
+  }
+  .navegacion ul li:nth-child(2).activo ~ .indicador{
+    transform: translateX(calc(70px * 1));
+  }
+  .navegacion ul li:nth-child(3).activo ~ .indicador{
+    transform: translateX(calc(70px * 2));
+  }
+  .navegacion ul li:nth-child(4).activo ~ .indicador{
+    transform: translateX(calc(70px * 3));
+  }
+  .navegacion ul li:nth-child(5).activo ~ .indicador{
+    transform: translateX(calc(70px * 4));
+  }
+
+  .navegacion ul li:nth-child(1).activo ~ .indicador::before{
+    background: #f53b57;
+  }
+  .navegacion ul li:nth-child(2).activo ~ .indicador::before{
+    background: #3c40c6;
+  }
+  .navegacion ul li:nth-child(3).activo ~ .indicador::before{
+    background: #05c46b;
+  }
+  .navegacion ul li:nth-child(4).activo ~ .indicador::before{
+    background: #0fbcf9;
+  }
+  .navegacion ul li:nth-child(5).activo ~ .indicador::before{
+    background: #ffa801;
+  }  
+  </style>
+</head>
+<body>
+  <div class="navegacion">
+    <ul>
+      <li class="lista activo" data-color="#f53b57">
+        <a href="#">
+          <span class="icono"><i class="fa fa-home"></i></span>
+          <span class="titulo">Inicio</span>
+        </a>
+      </li>
+      <li class="lista" data-color="#3c40c6">
+        <a href="#">
+          <span class="icono"><i class="fa fa-user"></i></span>
+          <span class="titulo">Perfil</span>
+        </a>
+      </li>
+      <li class="lista" data-color="#05c46b">
+        <a href="#">
+          <span class="icono"><i class="fa fa-comment"></i></span>
+          <span class="titulo">Mensajes</span>
+        </a>
+      </li>
+      <li class="lista" data-color="#0fbcf9">
+          <a href="#">
+            <span class="icono"><i class="fa fa-question-circle"></i></span>
+            <span class="titulo">Ayuda</span>
+          </a>
+      </li>
+      <li class="lista" data-color="#ffa801">
+        <a href="#">
+          <span class="icono"><i class="fa fa-cog"></i></span>
+          <span class="titulo">Configurar</span>
+        </a>
+      </li>
+      <div class="indicador"></div>
+    </ul>
+  </div>
+  <script>
+    let lista = document.querySelectorAll('.lista');
+    for(let i=0; i<lista.length; i++){
+     lista[i].onmouseover = function(){
+      let j = 0;
+      while(j<lista.length){
+        lista[j++].className = 'lista';
+      }
+      lista[i].className = 'lista activo';
+     }
+    }
+
+    lista.forEach(elemens=>{
+      elemens.addEventListener("mouseenter", function(event){
+        let bg = document.querySelector('body');
+        let color = event.target.getAttribute('data-color');
+        bg.style.backgroundColor = color;
+      })
+    })
+  </script>
+</body>
+</html>
