@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Css Menu v5</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #252839;
+  }
+  ul{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  ul li{
+    position: relative;
+    list-style: none;
+  }
+  ul li a{
+    position: relative;
+    font-size: 4em;
+    text-decoration: none;
+    line-height: 1em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255,255,255,0.5);
+  }
+  ul li a::before{
+    content: attr(data-text);
+    position: absolute;
+    color: var(--clr);
+    width: 0;
+    overflow: hidden;
+    transition: 1s;
+    border-right: 8px solid  var(--clr);
+    -webkit-text-stroke: 1px  var(--clr);
+  }
+  ul li a:hover::before{
+    width: 100%;
+    filter: drop-shadow(0 0 25px var(--clr));
+  }
+</style>
+</head>
+
+<body>
+  <ul>
+    <li style="--clr:#00ade1">
+      <a href="#" data-text="&nbsp;Inicio">&nbsp;Inicio&nbsp;</a>
+    </li>
+    <li style="--clr:#ff6493">
+      <a href="#" data-text="&nbsp;Perfil">&nbsp;Perfil&nbsp;</a>
+    </li>
+    <li style="--clr:#ffdd1c">
+      <a href="#" data-text="&nbsp;Servicios">&nbsp;Servicios&nbsp;</a>
+    </li>
+    <li style="--clr:#00dc82">
+      <a href="#" data-text="&nbsp;Equipo">&nbsp;Equipo&nbsp;</a>
+    </li>
+    <li style="--clr:#dc00d4">
+      <a href="#" data-text="&nbsp;Contacto">&nbsp;Contacto&nbsp;</a>
+    </li>
+  </ul>
+  <script>
+  </script>
+</body>
+
+</html>
