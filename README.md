@@ -12,3 +12,9 @@
 
 # Menu-v5
 ![video-to-gif](https://raw.githubusercontent.com/Marlonthe096/Menu-v1/main/Menu%20v5/menuv1.png)
+
+# Menu-v6
+![video-to-gif](https://raw.githubusercontent.com/Marlonthe096/Menu-v1/main/Menu%20v6/menuv1.png)
+
+# Menu-v7
+![video-to-gif](https://raw.githubusercontent.com/Marlonthe096/Menu-v1/main/Menu%20v7/menuv1.png)
