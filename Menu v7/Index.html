@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Css Menu V8</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    html,body{
+      display: grid;
+      height: 100%;
+      width: 100%;
+      place-items: center;
+      background: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+    }
+    .contenedor .boton{
+      display: inline-block;
+      width: 60px;
+      height: 60px;
+      float: left;
+      margin: 0 5px;
+      background: #fff;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease-out;
+      overflow: hidden;
+    }
+    .contenedor .boton .icono{
+      display: inline-block;
+      height: 60px;
+      width: 60px;
+      text-align: center;
+      border-radius: 50px;
+      box-sizing: border-box;
+      line-height: 60px;
+      transition: all 0.3s ease-out;
+    }
+    .contenedor .boton .icono i{
+      font-size: 25px;
+      line-height: 60px;
+    }
+    .contenedor .boton span{
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 60px;
+      margin-left: 10px;
+    }
+    .contenedor .boton:hover{
+      width: 200px;
+    }
+    .contenedor .boton:nth-child(1):hover .icono{
+      background: #4267b2;
+    }
+    .contenedor .boton:nth-child(2):hover .icono{
+      background: #1DA1F2;
+    }
+    .contenedor .boton:nth-child(3):hover .icono{
+      background: #128c7e;
+    }
+    .contenedor .boton:nth-child(4):hover .icono{
+      background: #333;
+    }
+    .contenedor .boton:nth-child(5):hover .icono{
+      background: #405DE6;
+    }
+    .contenedor .boton:hover .icono i{
+      color: #fff;
+    }
+    .contenedor .boton:nth-child(1):hover span{
+      color: #4267b2;
+    }
+    .contenedor .boton:nth-child(2):hover span{
+      color: #1DA1F2;
+    }
+    .contenedor .boton:nth-child(3):hover span{
+      color: #128c7e;
+    }
+    .contenedor .boton:nth-child(4):hover span{
+      color: #333;
+    }
+    .contenedor .boton:nth-child(5):hover span{
+      color: #E1306C;
+    }
+  </style>
+</head>
+<body>
+  <div class="contenedor">
+    <div class="boton">
+      <div class="icono">
+        <i class="fa fa-facebook"></i>
+      </div>
+      <span>Facebook</span>
+    </div>
+    <div class="boton">
+      <div class="icono">
+        <i class="fa fa-twitter"></i>
+      </div>
+      <span>Twitter</span>
+    </div>
+    <div class="boton">
+      <div class="icono">
+        <i class="fa fa-whatsapp"></i>
+      </div>
+      <span>Whatsapp</span>
+    </div>
+    <div class="boton">
+      <div class="icono">
+        <i class="fa fa-linkedin"></i>
+      </div>
+      <span>Linkedin</span>
+    </div>
+    <div class="boton">
+      <div class="icono">
+        <i class="fa fa-instagram"></i>
+      </div>
+      <span>Instagram</span>
+    </div>
+  </div>
+</body>
+</html>
